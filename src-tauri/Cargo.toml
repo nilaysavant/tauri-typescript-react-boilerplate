@@ -16,7 +16,7 @@ web-view = { version = "*", features = [ "edge" ] }
 
   [dependencies.tauri]
   version = "0.11"
-  features = [ ]
+  features = [ "notification" ]
 
 [target."cfg(windows)".build-dependencies]
 winres = "0.1"

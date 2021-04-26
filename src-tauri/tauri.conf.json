@@ -7,6 +7,9 @@
   },
   "ctx": {},
   "tauri": {
+    "allowlist": {
+      "notification": true
+    },
     "embeddedServer": {
       "active": false
     },
@@ -38,7 +41,6 @@
       },
       "exceptionDomain": ""
     },
-
     "window": {
       "title": "Tauri App",
       "width": 800,
@@ -49,7 +51,6 @@
     "security": {
       "csp": "default-src blob: data: filesystem: ws: http: https: 'unsafe-eval' 'unsafe-inline'"
     },
-
     "inliner": {
       "active": true
     }
