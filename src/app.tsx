@@ -12,19 +12,16 @@ export function App(): React.ReactElement {
       <h1>Hello World from Tauri Typescript React!</h1>
       <button
         onClick={() => {
-          // // @ts-expect-error TODO
-          // Tauri.promisified({
-          //   cmd: 'performRequest',
-          //   endpoint: 'dummy endpoint arg',
-          //   body: ['This', 'is', 'a', 'message', 'from', 'the', 'web'],
-          // })
-          //   // @ts-expect-error TODO
-          //   .then(Tauri.registerResponse)
-          //   .then((res) => {
-          //     setRustMsg(res.message)
-          //   })
-          //   // @ts-expect-error TODO
-          //   .catch(Tauri.registerResponse)
+          Tauri.tauri
+            .promisified({
+              cmd: 'performRequest',
+              endpoint: 'dummy endpoint arg',
+              body: ['This', 'is', 'a', 'message', 'from', 'the', 'web'],
+            })
+            .then((res: any) => {
+              console.log("🚀 ~ file: app.tsx ~ line 22 ~ .then ~ res", res)
+              setRustMsg(res)
+            })
           console.log(Tauri)
         }}
       >
