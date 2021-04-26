@@ -1,21 +1,16 @@
 {
-	"compilerOptions": {
-		"removeComments": true,
-		"esModuleInterop": true,
-		"allowSyntheticDefaultImports": true,
-		"experimentalDecorators": true,
-		"emitDecoratorMetadata": true,
-		"target": "es2017",
-		"sourceMap": true,
-		"moduleResolution": "node",
-		"incremental": true,
-		"jsx": "react",
-		"outDir": "dist",
-		"lib": [
-			"es5",
-			"es6",
-			"dom",
-			"dom.iterable"
-		]
-	}
+  "compilerOptions": {
+    "removeComments": true,
+    "esModuleInterop": true,
+    "allowSyntheticDefaultImports": true,
+    "experimentalDecorators": true,
+    "emitDecoratorMetadata": true,
+    "target": "es2017",
+    "sourceMap": true,
+    "moduleResolution": "node",
+    "incremental": true,
+    "jsx": "react",
+    "outDir": "dist",
+    "lib": ["es5", "es6", "dom", "dom.iterable"]
+  }
 }
