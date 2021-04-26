@@ -3,16 +3,22 @@
   windows_subsystem = "windows"
 )]
 
+use serde::{Deserialize, Serialize};
+
 mod cmd;
 
-fn main() {// Register a listener to the "js-event" event
+#[derive(Debug, Deserialize, Serialize)]
+struct Payload {
+  message: String,
+}
+
+fn main() {
+  // Register a listener to the "js-event" event
   tauri::AppBuilder::new()
     .invoke_handler(|_webview, arg| {
       use cmd::Cmd::*;
       match serde_json::from_str(arg) {
-        Err(e) => {
-          Err(e.to_string())
-        }
+        Err(e) => Err(e.to_string()),
         Ok(command) => {
           match command {
             // definitions for your custom commands from Cmd here
@@ -32,7 +38,10 @@ fn main() {// Register a listener to the "js-event" event
                   // if the returned value is Ok, the promise will be resolved with its value
                   // if the returned value is Err, the promise will be rejected with its value
                   // the value is a string that will be eval'd
-                  Ok("{ message: 'Hello World from Rust!' }".to_string())
+                  let payload = Payload {
+                    message: "Hello World from Rust!".to_string(),
+                  };
+                  Ok(payload)
                 },
                 callback,
                 error,
