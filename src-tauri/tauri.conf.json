@@ -38,9 +38,7 @@
       },
       "exceptionDomain": ""
     },
-    "whitelist": {
-      "event": true
-    },
+
     "window": {
       "title": "Tauri App",
       "width": 800,
@@ -51,9 +49,7 @@
     "security": {
       "csp": "default-src blob: data: filesystem: ws: http: https: 'unsafe-eval' 'unsafe-inline'"
     },
-    "edge": {
-      "active": true
-    },
+
     "inliner": {
       "active": true
     }

@@ -53,12 +53,15 @@
     "react-dom": "^16.13.1",
     "rimraf": "^3.0.2",
     "style-loader": "^1.2.1",
-    "tauri": "^0.11.1",
+    "tauri": "^0.14.1",
     "terser-webpack-plugin": "^3.0.2",
     "ts-node": "^8.10.2",
     "typescript": "^3.9.5",
     "webpack": "^4.43.0",
     "webpack-cli": "^3.3.11",
     "webpack-dev-server": "^3.11.0"
+  },
+  "dependencies": {
+    "@tauri-apps/cli": "^1.0.0-beta-rc.4"
   }
 }
